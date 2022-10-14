@@ -6,8 +6,11 @@ function getTime() {
   let _seconds = date.getSeconds();
   _seconds = String(_seconds).padStart(2, "0");
 
-  const _minute = date.getMinutes();
-  const _hour = date.getHours();
+  let _minute = date.getMinutes();
+  _minute = String(_minute).padStart(2, "0");
+
+  let _hour = date.getHours();
+  _hour = String(_hour).padStart(2, "0");
   clock.innerText = `${_hour}:${_minute}:${_seconds}`;
 }
 
