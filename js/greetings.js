@@ -1,7 +1,7 @@
 const loginForm = document.querySelector(".login-form");
-const loginInput = loginForm.querySelector("input:nth-child(2)");
+const loginInput = loginForm.querySelector("input:nth-child(1)");
 const greeting = document.querySelector("#greeting");
-const afterLoginBlock = document.querySelector("#afterlogin");
+const afterLoginBlock = document.querySelector(".afterlogin");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -17,7 +17,7 @@ function onLoginSubmit(event) {
 loginForm.addEventListener("submit", onLoginSubmit);
 
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `Hello, ${username}`;
   afterLoginBlock.classList.remove(HIDDEN_CLASSNAME);
 }
 
